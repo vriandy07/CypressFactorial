@@ -42,3 +42,26 @@ describe('Prospace Factorial Calculator', () => {
 Explanation:
 
 In Cypress to able use Xpath, we need to install the plugin first, you can follow the instruction here the [Xpath Installing Guide](https://www.programsbuzz.com/article/cypress-xpath-plugin).
+
+
+The following tests have been automated:
+
+   - Prospace Factorial Calculator
+     - TC_CALCULATE_001 - Verify success enter an integer number
+       > In the Prospace Factorial Calculator test case **TC_CALCULATE_001 - Verify success enter an integer number** I want to verify when click on the 'Enter an Integer' field is not disabled and able to enter an Integer number.
+       ```
+       it('TC_CALCULATE_001 - Verify success enter an integer number', () => {
+        cy.get('#number').type('6').should('have.value', '6')
+       })
+       ```
+       
+  - Prospace Factorial Calculator
+    - TC_CALCULATE_002 - Verify success calculate factorial
+      > In the Prospace Factorial Calculator **TC_CALCULATE_002 - Verify success calculate factorial** I want to verify success to enter an integer number and calculate factorial, then as a result in the page will display "The factorial of 6 is: xxx".
+       ```
+       it('TC_CALCULATE_002 - Verify success calculate factorial', () => {
+         cy.get('#number').type('6').should('have.value', '6')
+         cy.get('#getFactorial').click()
+         cy.contains('The factorial of 6 is: 720')
+       })
+       ```

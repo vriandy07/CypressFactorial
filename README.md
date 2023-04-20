@@ -17,3 +17,28 @@ Before running this project, make sure to have the following installed:
    - Node.js
 
  You can follow the instructions here [Cypress Installing Guide](https://docs.cypress.io/guides/getting-started/installing-cypress)
+ 
+ ## Tests ##
+
+This is the set up before the test
+```
+/// <reference types="cypress-xpath" />
+
+describe('Prospace Factorial Calculator', () => {
+  beforeEach(() => { 
+    cy.visit('http://z29vzcbmaw5kaw5nigzvcib5b3u.prospace.io/')
+
+    // Clear cookies and local storage before each test  
+    cy.clearCookies()
+    cy.clearLocalStorage()
+    // Do a hard reload to clear the cache  
+    cy.reload(true)
+  })
+  
+  ![image](https://user-images.githubusercontent.com/39895518/233440515-52dd5f6b-7650-4d86-9d70-d5b376a91294.png)
+
+
+```
+Explanation:
+
+In Cypress to able use Xpath, we need to install it first, you can follow the instruction here the [Xpath Installing Guide](https://www.programsbuzz.com/article/cypress-xpath-plugin).

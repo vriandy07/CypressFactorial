@@ -89,11 +89,11 @@ The following tests have been automated:
        
   - Prospace Factorial Calculator
     - TC_CALCULATE_005 - Verify failed Calculate negative number
-      > In the Prospace Factorial Calculator **TC_CALCULATE_005 - Verify failed Calculate negative number** I want to verify failed to calculate when enter negative number, In here I verify it by the result words 'The factorial of' is not exist on the page.
+      > In the Prospace Factorial Calculator **TC_CALCULATE_005 - Verify failed Calculate negative number** I want to verify failed to calculate when enter negative number, I verify it by the result words 'The factorial of' is not exist on the page.
        ```
        it('TC_CALCULATE_005 - Verify failed Calculate negative number', () => {
          cy.get('#number').type('-6').should('have.value', '-6')
          cy.get('#getFactorial').click()
          cy.contains('The factorial of').should('not.exist')
        })
-       ```     
+       ```

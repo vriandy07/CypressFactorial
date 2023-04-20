@@ -57,7 +57,7 @@ The following tests have been automated:
        
   - Prospace Factorial Calculator
     - TC_CALCULATE_002 - Verify success calculate factorial
-      > In the Prospace Factorial Calculator **TC_CALCULATE_002 - Verify success calculate factorial** I want to verify success to enter an integer number and calculate factorial, then as a result in the page will display "The factorial of 6 is: xxx".
+      > In the Prospace Factorial Calculator **TC_CALCULATE_002 - Verify success calculate factorial** I want to verify success to enter an integer number and calculate factorial, then as a result in the page will display "The factorial of X is: xxx".
        ```
        it('TC_CALCULATE_002 - Verify success calculate factorial', () => {
          cy.get('#number').type('6').should('have.value', '6')
@@ -65,3 +65,12 @@ The following tests have been automated:
          cy.contains('The factorial of 6 is: 720')
        })
        ```
+       
+  - Prospace Factorial Calculator
+    - TC_CALCULATE_003 - Verify failed calculate without enter an integer number
+      > In the Prospace Factorial Calculator **TC_CALCULATE_003 - Verify failed calculate without enter an integer number** I want to verify failed to calculate when the Enter an Integer field is empty, then as a result in the page will display "Please enter an integer".
+       ```
+       it('TC_CALCULATE_003 - Verify failed calculate without enter an integer number', () => {
+         cy.get('#getFactorial').click()
+         cy.contains('Please enter an integer')
+       }) 

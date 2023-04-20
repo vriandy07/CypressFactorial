@@ -35,10 +35,9 @@ describe('Prospace Factorial Calculator', () => {
     cy.reload(true)
   })
   
-  ![image](https://user-images.githubusercontent.com/39895518/233440515-52dd5f6b-7650-4d86-9d70-d5b376a91294.png)
-
-
 ```
+![image](https://user-images.githubusercontent.com/39895518/233440515-52dd5f6b-7650-4d86-9d70-d5b376a91294.png)
+
 Explanation:
 
 In Cypress to able use Xpath, we need to install it first, you can follow the instruction here the [Xpath Installing Guide](https://www.programsbuzz.com/article/cypress-xpath-plugin).

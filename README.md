@@ -73,4 +73,27 @@ The following tests have been automated:
        it('TC_CALCULATE_003 - Verify failed calculate without enter an integer number', () => {
          cy.get('#getFactorial').click()
          cy.contains('Please enter an integer')
-       }) 
+       })
+       ```
+       
+  - Prospace Factorial Calculator
+    - TC_CALCULATE_004 - Verify failed calculate not an integer number
+      > In the Prospace Factorial Calculator **TC_CALCULATE_004 - Verify failed calculate not an integer number** I want to verify failed to calculate when enter not an integer number, then as a result in the page will display "Please enter an integer".
+       ```
+       it('TC_CALCULATE_004 - Verify failed calculate not an integer number', () => {
+         cy.get('#number').type('A').should('have.value', 'A')
+         cy.get('#getFactorial').click()
+         cy.contains('Please enter an integer')
+       })
+       ```
+       
+  - Prospace Factorial Calculator
+    - TC_CALCULATE_005 - Verify failed Calculate negative number
+      > In the Prospace Factorial Calculator **TC_CALCULATE_005 - Verify failed Calculate negative number** I want to verify failed to calculate when enter negative number, In here I verify it by the result words 'The factorial of' is not exist on the page.
+       ```
+       it('TC_CALCULATE_005 - Verify failed Calculate negative number', () => {
+         cy.get('#number').type('-6').should('have.value', '-6')
+         cy.get('#getFactorial').click()
+         cy.contains('The factorial of').should('not.exist')
+       })
+       ```     

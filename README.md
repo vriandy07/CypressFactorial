@@ -21,6 +21,7 @@ Before running this project, make sure to have the following installed:
  ## Tests ##
 
 This is the set up before the test
+
 ```
 /// <reference types="cypress-xpath" />
 
@@ -40,4 +41,4 @@ describe('Prospace Factorial Calculator', () => {
 
 Explanation:
 
-In Cypress to able use Xpath, we need to install it first, you can follow the instruction here the [Xpath Installing Guide](https://www.programsbuzz.com/article/cypress-xpath-plugin).
+In Cypress to able use Xpath, we need to install the plugin first, you can follow the instruction here the [Xpath Installing Guide](https://www.programsbuzz.com/article/cypress-xpath-plugin).

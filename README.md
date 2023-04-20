@@ -97,3 +97,25 @@ The following tests have been automated:
          cy.contains('The factorial of').should('not.exist')
        })
        ```
+   
+   - Prospace Factorial Calculator
+    - TC_CALCULATE_006 - Verify click on Terms and Conditions
+      > In the Prospace Factorial Calculator **TC_CALCULATE_006 - Verify click on Terms and Conditions** I want to verify clicking on Terms and Conditions redirect to the Terms and Conditions page by verify the URL.
+       ```
+       it('TC_CALCULATE_006 - Verify click on Terms and Conditions', () => {
+         cy.xpath('//*[text()="Terms and Conditions"]').click()
+         cy.url().should('contain','/terms');
+       })
+       ```
+       
+   - Prospace Factorial Calculator
+    - TC_CALCULATE_007 - Verify click on Privacy
+      > In the Prospace Factorial Calculator **TC_CALCULATE_007 - Verify click on Privacy** I want to verify clicking on Privacy redirect to the Privacy page by verify the URL.
+       ```
+       it('TC_CALCULATE_007 - Verify click on Privacy', () => {
+         cy.xpath('//*[text()="Privacy"]').click()
+         cy.url().should('contain','/privacy');
+       })
+       ```    
+       
+       
